@@ -13,20 +13,20 @@ export default {
     mode: {
       type: String,
       required: false,
-      default: null
+      default: null,
     },
     link: {
       type: Boolean,
       required: false,
-      default: false
+      default: false,
     },
     to: {
       type: String,
       required: false,
-      default: '/'
-    }
-  }
-}
+      default: '/',
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -39,7 +39,7 @@ a {
   border: 1px solid #3a0061;
   color: white;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 10px;
   margin-right: 0.5rem;
   display: inline-block;
 }

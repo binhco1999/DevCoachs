@@ -6,6 +6,9 @@
       </h1>
       <ul>
         <li>
+          <router-link to="/backgrounds">All Backgrounds</router-link>
+        </li>
+        <li>
           <router-link to="/coaches">All Coaches</router-link>
         </li>
         <li v-if="isLoggedIn">
@@ -27,15 +30,15 @@ export default {
   computed: {
     isLoggedIn() {
       return this.$store.getters.isAuthenticated;
-    }
+    },
   },
   methods: {
     logout() {
       this.$store.dispatch('logout');
       this.$router.replace('/coaches');
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>

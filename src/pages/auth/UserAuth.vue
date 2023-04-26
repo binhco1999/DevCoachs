@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper-authenticate">
     <base-dialog :show="!!error" title="An error occurred" @close="handleError">
       <p>{{ error }}</p>
     </base-dialog>
@@ -16,11 +16,14 @@
           <label for="password">Password</label>
           <input type="password" id="password" v-model.trim="password" />
         </div>
-        <p
-          v-if="!formIsValid"
-        >Please enter a valid email and password (must be at least 6 characters long).</p>
+        <p v-if="!formIsValid">
+          Please enter a valid email and password (must be at least 6 characters
+          long).
+        </p>
         <base-button>{{ submitButtonCaption }}</base-button>
-        <base-button type="button" mode="flat" @click="switchAuthMode">{{ switchModeButtonCaption }}</base-button>
+        <base-button type="button" mode="flat" @click="switchAuthMode">{{
+          switchModeButtonCaption
+        }}</base-button>
       </form>
     </base-card>
   </div>
@@ -124,6 +127,7 @@ textarea {
   font: inherit;
   border: 1px solid #ccc;
   padding: 0.15rem;
+  border-radius: 3px;
 }
 
 input:focus,
@@ -131,5 +135,14 @@ textarea:focus {
   border-color: #3d008d;
   background-color: #faf6ff;
   outline: none;
+}
+.wrapper-authenticate {
+  transition: 0.4s;
+  background-color: white;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+.wrapper-authenticate:hover {
+  opacity: 1;
 }
 </style>
