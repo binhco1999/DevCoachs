@@ -10,6 +10,8 @@
   "dependencies": {
     "chroma-js": "^2.4.2",
     "core-js": "^3.6.5",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^10.4.1",
     "three": "0.134",
     "troisjs": "^0.3.4",
     "vue": "^3.0.0",

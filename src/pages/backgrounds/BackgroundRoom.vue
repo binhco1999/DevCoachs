@@ -154,7 +154,7 @@ export default {
   },
 };
 </script>
-<style scoped>
+<style scoped lang="scss">
 .background-content {
   width: 100%;
   height: 100vh;
